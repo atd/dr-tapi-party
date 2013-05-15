@@ -21,17 +21,21 @@
     </div>
 
     <div class="participate span2">
-      <div class="btn-group">
-        <button class="btn dropdown-toggle" data-toggle="dropdown">
-          Me apunto!
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a tabindex="-1" href="#">Voz</a></li>
-          <li><a tabindex="-1" href="#">Guitarra</a></li>
-          ...
-        </ul>
-      </div>
+      <% if user_signed_in? %>
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">
+            Me apunto!
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a tabindex="-1" href="#">Voz</a></li>
+            <li><a tabindex="-1" href="#">Guitarra</a></li>
+            ...
+          </ul>
+        </div>
+      <% else %>
+        <%= button_to "Me apunto!", new_user_session_path, class: "btn", method: :get %>
+      <% end %>
     </div>
   </div>
 
