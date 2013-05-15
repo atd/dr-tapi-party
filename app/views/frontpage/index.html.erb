@@ -34,7 +34,7 @@
           </ul>
         </div>
       <% else %>
-        <%= button_to "Me apunto!", new_user_session_path, class: "btn", method: :get %>
+        <%= link_to "Me apunto!", new_user_session_path, class: "btn" %>
       <% end %>
     </div>
   </div>
@@ -46,3 +46,27 @@
   <% end %>
 </section>
 
+<% if user_signed_in? %>
+  <%= link_to "Añadir canción", "#new-song-modal", class: 'btn', "data-toggle" => 'modal' %>
+
+  <div id="new-song-modal" class="modal hide fade">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3>Añadir canción</h3>
+    </div>
+    <%= form_for Song.new do |f| %>
+      <div class="modal-body">
+        <%= f.label :title, "Título" %>
+        <%= f.text_field :title %>
+
+        <%= f.label :youtube, "Enlace a Youtube" %>
+        <%= f.text_field :youtube %>
+    </div>
+      <div class="modal-footer">
+        <%= f.submit 'Añadir', class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <%= link_to "Añadir canción", new_user_session_path, class: 'btn' %>
+<% end %>
