@@ -1,0 +1,4 @@
+<%= form_for song.plays.where(user_id: current_user.id).first || song.plays.build,
+             remote: true do |f| %>
+  <%= f.select :instruments, Play::Instruments.map{ |i| [i, i] }, {}, { multiple: true } %>
+<% end %>

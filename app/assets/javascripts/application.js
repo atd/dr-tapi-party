@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //
 //= require bootstrap
+//= require bootstrap-multiselect
 //= require flashy
 //
 //= require_tree .

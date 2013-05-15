@@ -5,4 +5,6 @@ class Play < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :song
+
+  serialize :instruments
 end
