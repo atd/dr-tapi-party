@@ -1,0 +1,2 @@
+<!-- replace_contents "code[erb-loud]:contains('email_field')" -->
+f.email_field :email
