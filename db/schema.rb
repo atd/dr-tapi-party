@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515213515) do
+ActiveRecord::Schema.define(:version => 20130515222052) do
+
+  create_table "plays", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "song_id"
+    t.text     "instruments"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "plays", ["song_id"], :name => "index_plays_on_song_id"
+  add_index "plays", ["user_id"], :name => "index_plays_on_user_id"
 
   create_table "songs", :force => true do |t|
     t.string   "title"

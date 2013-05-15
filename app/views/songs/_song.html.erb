@@ -10,9 +10,13 @@
   </div>
 
   <div class="participants span5">
-    <span class="label"><a href="#" data-toggle="tooltip" data-original-title="atd">Voz</a></span>
-    <span class="label">Bajo</span>
-    <span class="label">Batería</span>
+    <% Play::Instruments.each do |i| %>
+      <% if false && song.players?(i) %>
+        <span class="label label-success"><a href="#" data-toggle="tooltip" data-original-title="<%= song.players(i).map(&:name).to_sentence %>"><%= i %></a></span>
+      <% else %>
+        <span class="label"><%= i %></span>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="participate span2">

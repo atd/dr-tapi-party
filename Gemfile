@@ -40,3 +40,7 @@ gem 'jquery-rails'
 gem 'flashy'
 gem 'devise'
 gem 'deface'
+
+group :development do
+  gem 'pry-rails'
+end

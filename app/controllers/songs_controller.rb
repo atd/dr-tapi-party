@@ -1,4 +1,6 @@
 class SongsController < ApplicationController
+  before_filter :authenticate_user!
+
   def create
     song = Song.create params[:song]
 
