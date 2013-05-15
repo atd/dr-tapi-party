@@ -4,3 +4,41 @@
   </div>
 </header>
 
+<section class="songs">
+  <div class="song row">
+    <div class="title span4">
+      Fugitivos del paraíso
+    </div>
+
+    <div class="youtube span1">
+      Youtube
+    </div>
+
+    <div class="participants span5">
+      <span class="label"><a href="#" data-toggle="tooltip" data-original-title="atd">Voz</a></span>
+      <span class="label">Bajo</span>
+      <span class="label">Batería</span>
+    </div>
+
+    <div class="participate span2">
+      <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+          Me apunto!
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a tabindex="-1" href="#">Voz</a></li>
+          <li><a tabindex="-1" href="#">Guitarra</a></li>
+          ...
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <%= javascript_tag do %>
+    $(function() {
+      $(".participants a").tooltip();
+    });
+  <% end %>
+</section>
+
