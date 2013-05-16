@@ -9,6 +9,12 @@ var Song = (function($, undefined) {
       buttonText: playSelectText
     });
 
+    // Add btn-success
+    $('.participate option[selected]').
+      closest('form').
+      find('button').
+      addClass('btn-success');
+
     // Forms
     storeFormValues($('.participate form'));
 
