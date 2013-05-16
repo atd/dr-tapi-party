@@ -4,7 +4,7 @@
   </div>
 
   <div class="youtube span1">
-    <%= link_to_if song.youtube.present?, "Youtube", song.youtube do %>
+    <%= link_to_if song.youtube.present?, "Youtube", song.youtube, target: '_blank' do %>
       Youtube
     <% end %>
   </div>
