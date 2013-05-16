@@ -15,7 +15,7 @@
 </section>
 
 <% if user_signed_in? %>
-  <%= link_to "Añadir canción", "#new-song-modal", class: 'btn', "data-toggle" => 'modal' %>
+    <%= link_to "Añadir canción", "#new-song-modal", class: 'btn btn-primary', "data-toggle" => 'modal' %>
 
   <div id="new-song-modal" class="modal hide fade">
     <div class="modal-header">
@@ -36,5 +36,5 @@
     <% end %>
   </div>
 <% else %>
-  <%= link_to "Añadir canción", new_user_session_path, class: 'btn' %>
+  <%= link_to "Añadir canción", new_user_session_path, class: 'btn btn-primary' %>
 <% end %>
