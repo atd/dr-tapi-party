@@ -5,7 +5,7 @@ class Play < ActiveRecord::Base
 
   serialize :instruments
 
-  attr_accessible :song, :instruments
+  attr_accessible :song_id, :instruments
 
   belongs_to :user
   belongs_to :song
