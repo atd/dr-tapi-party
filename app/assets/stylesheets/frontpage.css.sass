@@ -2,24 +2,47 @@ html
   background: $black
 body
   color: $white
-  background: -moz-linear-gradient(-45deg,  #0D2716 0%, rgba(0,100,23,0) 100%)
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#0D2716), color-stop(100%,rgba(0,100,23,0)))
-  background: -webkit-linear-gradient(-45deg,  #0D2716 0%,rgba(0,100,23,0) 100%)
-  background: -o-linear-gradient(-45deg,  #0D2716 0%,rgba(0,100,23,0) 100%)
-  background: -ms-linear-gradient(-45deg,  #0D2716 0%,rgba(0,100,23,0) 100%)
-  background: linear-gradient(135deg,  #0D2716 0%,rgba(0,100,23,0) 100%)
+  background: -moz-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#170041), color-stop(100%,rgba(0,0,0,0)))
+  background: -webkit-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
+  background: -o-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
+  background: -ms-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
+  background: linear-gradient(135deg, #170041 0%, rgba(100, 0, 0, 0) 100%)
   min-height: 771px
 
 
 header
   h1
     font-family: "BlackCasper"
-    font-size: 142px
+    font-size: 144px
+    text-align: center
     line-height: 199px
     text-shadow: 16px 40px 14px #000
+    color: #FDFFF2
 
 .participants
   .label-success
     a
       color: $white
+.participate
+  float: right
+.songs
+  background: $black
+  padding: 39px
+.dropdown-menu
+  margin-left: -58px
+.modal
+  background: url("/assets/modal-note.png")transparent no-repeat
 
+.modal-header,
+.modal-body
+  margin-left: 76px
+.modal-header
+  margin-top: 25px
+  border-bottom: none
+  color: #333
+
+.modal-footer
+  background: transparent
+  border-top: none
+  box-shadow: none
