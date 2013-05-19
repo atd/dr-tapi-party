@@ -26,23 +26,94 @@ header
       color: $white
 .participate
   float: right
+
+.label
+  padding: 2px 7px
+  margin-left: 4px
+  font-size: 18px
+  line-height: 27px
 .songs
   background: $black
   padding: 39px
+  header
+    margin-bottom: 50px
+    h2
+      font-family: "GiveyouGlory"
+      width:  400px
+      display: inline
+      margin-top: -8px
+    a
+      display: inline-block
+      float: right
+      background: url("/assets/add-song.png")transparent no-repeat
+      width: 87px
+      height: 113px
+      margin-top: -74px
+      @include transition (background 1s) 
+      &:hover
+        background: url("/assets/add-song-hover.png")transparent no-repeat
+  li
+    height: 28px
+    border-bottom: 1px solid #170041
+    list-style: none
+
 .dropdown-menu
   margin-left: -58px
+  li
+    a 
+      &:hover
+        background-color: #56FF64
+        background-image: none
+        color: #555 
+  .active
+    background-color: #56FF64
+    a  
+      background-image: none
+      background-color: transparent
+      color: #555
+      &:hover
+        background-color: #000
+        background-image: none
+        color: #fff
+.btn-succes
+  background-color: #5BB65B
+  background-image: linear-gradient(to bottom, #62C462, #62C462)
+  @include transition (background .5s)
+  &:hover
+    background-color: #5BB65B
+.label-success
+  background-color: #5BB65B
 .modal
   background: url("/assets/modal-note.png")transparent no-repeat
-
-.modal-header,
-.modal-body
-  margin-left: 76px
+  
 .modal-header
   margin-top: 25px
+  margin-left: 76px
   border-bottom: none
   color: #333
+  font-family: "GiveyouGlory"
+  .close
+    line-height: 32px
+    font-size: 45px
+.modal-body
+  margin-left: 104px
+  padding-top: 3px
+  padding-bottom: 5px
+  label
+    font-family: "GiveyouGlory"
+    color: #666
+  input
+    &[type="text"]
+      border: 1px solid #999
+      font-family: "GiveyouGlory"
+      background: transparent
+      font-size: 16px
+      padding: 9px 16px
+      color: #666
+      width: 332px
 
 .modal-footer
   background: transparent
   border-top: none
   box-shadow: none
+  padding-top: 0px

@@ -7,8 +7,17 @@
 </header>
 
 <section class="songs">
-  <%= render Song.all %>
-
+  <header>
+    <h2>
+      listado de canciones
+    </h2>
+    <% if user_signed_in? %>
+      <%= link_to "", "#new-song-modal", "data-toggle" => 'modal' %>
+    <% end %>
+  </header>
+  <ul>
+    <%= render Song.all %>
+  </ul>
   <%= javascript_tag do %>
     $(function() {
       Song.index();
@@ -17,7 +26,6 @@
 </section>
 
 <% if user_signed_in? %>
-    <%= link_to "Añadir canción", "#new-song-modal", class: 'btn btn-primary', "data-toggle" => 'modal' %>
 
   <div id="new-song-modal" class="modal hide fade">
     <div class="modal-header">
