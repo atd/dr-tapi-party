@@ -1,7 +1,7 @@
 html
   background: $black
 body
-  color: $white
+  color: #FDFFF2
   background: -moz-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#170041), color-stop(100%,rgba(0,0,0,0)))
   background: -webkit-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
@@ -18,7 +18,6 @@ header
     text-align: center
     line-height: 199px
     text-shadow: 16px 40px 14px #000
-    color: #FDFFF2
 
 .participants
   .label-success
@@ -38,10 +37,11 @@ header
   header
     margin-bottom: 50px
     h2
-      font-family: "GiveyouGlory"
+      font-family: "desyrel"
       width:  400px
       display: inline
       margin-top: -8px
+      font-size: 43px
     a
       display: inline-block
       float: right
@@ -49,13 +49,14 @@ header
       width: 87px
       height: 113px
       margin-top: -74px
-      @include transition (background 1s) 
+      @include transition (background .5s) 
       &:hover
         background: url("/assets/add-song-hover.png")transparent no-repeat
   li
     height: 28px
     border-bottom: 1px solid #170041
     list-style: none
+    color: #fff
 
 .dropdown-menu
   margin-left: -58px
@@ -91,29 +92,57 @@ header
   margin-left: 76px
   border-bottom: none
   color: #333
-  font-family: "GiveyouGlory"
+  font-family: "desyrel"
   .close
     line-height: 32px
     font-size: 45px
 .modal-body
-  margin-left: 104px
-  padding-top: 3px
-  padding-bottom: 5px
+  margin: -13px 0 0 104px
+  padding: 3px 0 5px
+  @include rotate(-2deg)
   label
-    font-family: "GiveyouGlory"
+    font-family: "desyrel"
     color: #666
+    @include rotate(-3deg)
+    font-size: 16px
+    padding-bottom: 7px
   input
     &[type="text"]
       border: 1px solid #999
-      font-family: "GiveyouGlory"
-      background: transparent
-      font-size: 16px
+      font-family: "desyrel"
+      background: rgba(86, 255, 100, .3)
+      font-size: 23px
       padding: 9px 16px
-      color: #666
+      color: #333
       width: 332px
+      border-top: none
+      border-left: none
+      border-right: none
+      box-shadow: none
+      border-radius: 0px
+      border-bottom: dashed
 
 .modal-footer
-  background: transparent
   border-top: none
   box-shadow: none
   padding-top: 0px
+  background: transparent
+  input
+    background: url("/assets/mark.png")transparent no-repeat
+    border: none
+    width: 104px
+    background-position-y: 1px
+    height: 37px
+    font-family: "desyrel"
+    &:hover
+      background: url("/assets/mark-hover.png")transparent no-repeat
+      background-position-y: 1px
+
+
+footer
+  width: 1000px
+  margin: 10px auto 0
+  padding: 13px 0 0 16px
+  height: 35px
+  background: $black
+  font-size: 14.5px

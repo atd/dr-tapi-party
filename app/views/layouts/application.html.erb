@@ -2,16 +2,21 @@
 <html>
 <head>
   <title>Dr.Tapi Party!</title>
-  <link rel="shortcut icon" src="/assets/favicon.ico">
+  <link rel="shortcut icon" src="/icons/favicon.ico">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div class="container">
-    <%= flashy %>
 
-    <%= yield %>
+	    <%= flashy %>
+
+	    <%= yield %>
+
   </div>
+  <footer>
+  	>>>> 14 Junio 2013 - SALA STARVING - 22:00 // ¿dónde? Fermín Caballero, 69 ¿transporte? metro: Peñagrande-Herrera Oria bus: 67-133-127
+  </footer>
 </body>
 </html>

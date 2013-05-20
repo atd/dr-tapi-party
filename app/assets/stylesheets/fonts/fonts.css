@@ -2,10 +2,10 @@
 
 @font-face{
   font-family:"BlackCasper";
-  src: url(dr-tapi-party/fonts/BlackCasper.ttf) format('truetype');
+  src: url(fonts/BlackCasper.ttf) format('truetype');
 }
 
 @font-face{
-  font-family:"GiveyouGlory";
-  src: url(dr-tapi-party/fonts/GiveYouGlory.ttf) format('truetype');
+  font-family:"desyrel";
+  src: url(fonts/desyrel.ttf) format('truetype');
 }
