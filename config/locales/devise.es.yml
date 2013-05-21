@@ -38,7 +38,7 @@ es:
       confirmed: 'Tu cuenta fue confirmada. Ya iniciaste sesión.'
     registrations:
       link: 'Crear cuenta'
-      signed_up: 'Bienvenido. Tu cuenta fue creada.'
+      signed_up: 'Bienvenid@. Tu cuenta fue creada.'
       inactive_signed_up: 'Tu cuenta fue creada. Sin embargo, no podemos iniciar tu sesión porque tu cuenta está %{reason}.'
       updated: 'Tu cuenta fue actualizada.'
       destroyed: 'Fue grato tenerte con nosotros. Tu cuenta fue cancelada.'
