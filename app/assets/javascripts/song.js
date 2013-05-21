@@ -29,10 +29,10 @@ var Song = (function($, undefined) {
     var msg;
 
     if (options.length === 0) {
-      msg = 'Me apunto!';
+      msg = 'Me apunkto!';
     }
     else {
-      msg = 'Apuntada';
+      msg = 'Apunktada';
     }
 
     return msg + '<b class="caret"></b>';
