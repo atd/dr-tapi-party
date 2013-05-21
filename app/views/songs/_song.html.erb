@@ -1,6 +1,10 @@
 <li id="<%= dom_id song %>">
   <h4 class="span5">
-    <%= link_to "X", new_user_session_path, class: "erase" %>
+    <% if song.user == current_user %>
+      <%= link_to "X", song, method: :delete, confirm: '¿Borrar canción?', class: "erase" %>
+    <% else %>
+      <span class="cannot-erase"></span>
+    <% end %>
 
     <%= link_to_if song.youtube.present?, song.title, song.youtube, class: "title", target: '_blank' do %>
       <%= song.title %>
