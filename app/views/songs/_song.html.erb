@@ -1,6 +1,7 @@
 <li id="<%= dom_id song %>">
-
   <h4 class="span5">
+    <%= link_to "X", new_user_session_path, class: "btn" %>
+
     <%= link_to_if song.youtube.present?, song.title, song.youtube, target: '_blank' do %>
       <%= song.title %>
 
