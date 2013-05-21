@@ -52,6 +52,8 @@ header
       @include transition (background .5s) 
       &:hover
         background: url("/assets/add-song-hover.png")transparent no-repeat
+  ul
+    margin-left: 0px
   li
     height: 28px
     border-bottom: 1px solid #06290A
@@ -59,9 +61,24 @@ header
     color: #fff
     clear: both
     padding-bottom: 11px
+    &:hover
+      .erase
+        @include opacity(100)
+        color: $red
+        text-decoration: none
+      .title
+        text-decoration: none
+        color: #FDFFF2 !important
+        @include opacity(100)
     h4
       vertical-align: middle
       line-height: 10px
+      margin-left: 0px
+      .erase
+        @include opacity(0)
+        margin-right: 13px
+      
+          
 
 .dropdown-menu
   margin-left: -58px
