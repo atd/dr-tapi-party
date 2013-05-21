@@ -13,6 +13,8 @@
     </h2>
     <% if user_signed_in? %>
       <%= link_to "", "#new-song-modal", "data-toggle" => 'modal' %>
+    <% else %>
+      <%= link_to "", new_user_session_path %>
     <% end %>
   </header>
   <ul>
@@ -45,6 +47,4 @@
       </div>
     <% end %>
   </div>
-<% else %>
-  <%= link_to "Añadir canción", new_user_session_path, class: 'btn btn-primary' %>
 <% end %>
