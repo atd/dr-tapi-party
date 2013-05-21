@@ -1,13 +1,11 @@
 <li id="<%= dom_id song %>">
-  <h4 class="span4">
-    <%= song.title %>
-  </h4>
 
-  <div class="youtube span1">
-    <%= link_to_if song.youtube.present?, "song.title", song.youtube, target: '_blank' do %>
-      Youtube
+  <h4 class="span5">
+    <%= link_to_if song.youtube.present?, song.title, song.youtube, target: '_blank' do %>
+      <%= song.title %>
+
     <% end %>
-  </div>
+  </h4>
 
   <div class="participants span4">
     <% Play::Instruments.each do |i| %>
@@ -23,7 +21,7 @@
     <% if user_signed_in? %>
       <%= render partial: 'plays/button', locals: { song: song } %>
     <% else %>
-      <%= link_to "Me apunto!", new_user_session_path, class: "btn" %>
+      <%= link_to "Me apunkto!", new_user_session_path, class: "btn" %>
     <% end %>
   </div>
 </li>
