@@ -15,7 +15,7 @@
   <div class="participants span4">
     <% Play::Instruments.each do |i| %>
       <% if song.players?(i) %>
-        <span class="label label-success"><a href="#" data-toggle="tooltip" data-original-title="<%= song.players(i).map(&:name).to_sentence %>"><%= i %></a></span>
+        <span class="label label-success"><a href="javascript:void(0);" data-toggle="tooltip" data-original-title="<%= song.players(i).map(&:name).to_sentence %>"><%= i %></a></span>
       <% else %>
         <span class="label"><%= i %></span>
       <% end %>
