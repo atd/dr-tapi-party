@@ -1,5 +1,5 @@
 html
-  background: $black
+  background-color: #000
 body
   color: #FDFFF2
   background: -moz-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
@@ -9,6 +9,76 @@ body
   background: -ms-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
   background: linear-gradient(135deg, #170041 0%, rgba(100, 0, 0, 0) 100%)
   min-height: 771px
+h2
+  color: #FDFFF2
+form#new_user
+  padding-bottom: 74px !important
+  div
+    width: 245px
+form#new_user
+  background: #000
+  width: 312px
+  padding: 32px 26px
+  min-height: 133px
+  margin-bottom: 3px
+  label
+    font-family: "desyrel"
+    color: #666
+    @include rotate(-3deg)
+    font-size: 18px
+  input
+    &[type="email"]
+      @include rotate(-5deg)
+      margin-top: -10px
+    &[type="password"]
+      @include rotate(-1deg)
+      margin-top: -3px
+      margin-left: -10px
+    &[type="text"]
+      @include rotate(2deg)
+      margin-top: -3px
+      margin-left: -10px
+  input
+    &[type="email"],
+    &[type="password"],
+    &[type="text"]
+      border: 1px solid #999
+      font-family: "desyrel"
+      background: rgb(86, 255, 100)
+      font-size: 15px
+      padding: 9px 16px
+      color: #333
+      width: 207px
+      border-top: none
+      border-left: none
+      border-right: none
+      box-shadow: none
+      border-radius: 0px
+      border-bottom: dashed
+    &[type="checkbox"]
+      float: left
+      padding-top: 17px
+      margin-top: 11px
+      margin-right: 2px
+      margin-left: 60px
+    &[type="submit"]
+      background: url("/assets/mark-inv.png")transparent no-repeat
+      border: none
+      width: 104px
+      background-position-y: 1px
+      height: 37px
+      font-family: "desyrel"
+      color: #666
+      float: right
+      margin-right: 30px
+      margin-top: 13px
+      &:hover
+        background: url("/assets/mark-hover-inv.png")transparent no-repeat
+        background-position-y: 1px
+  #user_password_confirmation
+    @include rotate(-1deg)
+    margin-top: -4px
+    margin-left: -4px
 
 
 header
@@ -35,7 +105,7 @@ header
   background: $black
   padding: 39px
   header
-    margin-bottom: 50px
+    margin-bottom: 32px
     h2
       font-family: "desyrel"
       width:  400px
@@ -60,7 +130,8 @@ header
     list-style: none
     color: #fff
     clear: both
-    padding-bottom: 11px
+    margin-top: 6px
+    padding-bottom: 8px
     &:hover
       .erase
         @include opacity(100)
@@ -70,6 +141,10 @@ header
         text-decoration: none
         color: #FDFFF2 !important
         @include opacity(100)
+    &:first-child
+      border-top: 1px solid #06290A
+      padding-top: 6px
+
     h4
       vertical-align: middle
       line-height: 10px
