@@ -3,6 +3,7 @@ class Song < ActiveRecord::Base
 
   validates :title, presence: true
 
+  belongs_to :user
   has_many :plays, dependent: :destroy
 
   def players?(instrument)
