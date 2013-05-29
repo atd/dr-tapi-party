@@ -1,4 +1,4 @@
 <!-- insert_after "code[erb-loud]:contains('devise_error_messages')" -->
 
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name, :autofocus => true %></div>
+  <%= f.label :name %><br />
+  <%= f.text_field :name, :autofocus => true %>
