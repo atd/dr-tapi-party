@@ -13,7 +13,7 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.3.1.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -38,6 +38,8 @@ gem 'flashy'
 gem 'devise'
 gem 'deface'
 gem 'pry-rails'
+gem 'acts_as_commentable_with_threading'
+gem "auto_html"
 
 group :development do
   gem 'sqlite3'

@@ -1,8 +1,60 @@
-<header class="row">
+<header id="champi_animation" class="row">
   <div class="span12">
-    <img src="assets/logo-header.png">
+    <span>CHAMPI</span>
+      <%= image_tag "champi.png" %>
+    <span>PARTY</span>
   </div>
 </header>
+
+  <%= javascript_tag do %>
+
+    var champi_with;
+    var champi_height;
+    var height_toggle = 1;
+
+    function getRandomArbitary (min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function random_x_position() {
+      return getRandomArbitary(1, parseInt(champi_with));
+    }
+
+    function random_y_position() {
+      random_height = getRandomArbitary(1, parseInt(champi_height));
+      if(height_toggle == 1) {
+        return random_height;
+        height_toggle = 0;
+      } else {
+        return "-" + random_height;
+        height_toggle = 1;
+      }
+  
+    }
+
+    function danceTheChampi() {
+
+    random_rotation = '+=' + Math.floor(Math.random()*55);
+    random_scale    = parseFloat("1." + Math.floor(Math.random()*11));
+    random_skewX    = Math.floor(Math.random()*55) + 'deg';
+    
+
+
+    $('#champi_animation img').transition({ rotate:    random_rotation,
+                                            scale:     random_scale, 
+                                            skewX:     random_skewX }, 500);   
+      setTimeout(function() { danceTheChampi() }, 100);
+    }
+
+    $(function() {
+      champi_with   = $('#champi_animation').width();
+      champi_height = $('#champi_animation').height();
+
+      danceTheChampi();
+
+    });
+  <% end %>
+
 
 <section class="songs">
   <header>
