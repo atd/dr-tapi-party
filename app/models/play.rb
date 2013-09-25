@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class Play < ActiveRecord::Base
-  Instruments = %w{ Voz Guitarra Bajo Batería }
+  Instruments = %w{ Voz Guitarra Bajo Batería Coros }
 
   serialize :instruments
 

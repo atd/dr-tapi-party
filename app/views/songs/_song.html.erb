@@ -14,7 +14,7 @@
   </h4>
 
 
-  <div class="participants span4">
+  <div class="participants ">
     <% Play::Instruments.each do |i| %>
       <% if song.players?(i) %>
         <span class="label label-success"><a href="javascript:void(0);" data-toggle="tooltip" data-original-title="<%= song.players(i).map(&:name).to_sentence %>"><%= i %></a></span>
@@ -24,13 +24,13 @@
     <% end %>
   </div>
 
-  <% if user_signed_in? %>
-    <div class="participants span2">
+  <div class="song_comment_link ">
+    <% if user_signed_in? %>
       <%= link_to_function "Komentar (#{ song.comment_threads.count })", "$('##{ dom_id song }_comments').toggle(); return false;" %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 
-  <div class="participate span2">
+  <div class="participate">
     <% if user_signed_in? %>
       <%= render partial: 'plays/button', locals: { song: song } %>
     <% else %>
