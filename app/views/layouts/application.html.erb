@@ -19,7 +19,8 @@
 
   </div>
   <footer>
-  	<span>>>>></span> 19 Octubre 2013 - NO SE EL SITIO, NO ME LO DICEN, NI LA HORA
+  	<span>>>>></span> 19 Octubre 2013 - NO SE EL SITIO, NO ME LO DICEN, NI LA HORA. 
+    <% if current_user %><%= link_to "Salir", destroy_user_session_path(), :method => :delete %><% end %>
   </footer>
 </body>
 </html>
