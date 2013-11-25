@@ -1,5 +1,5 @@
 <li id="<%= dom_id song %>">
-  <h4 class="span5">
+  <h4 class="span3">
     <% if song.user == current_user %>
       <%= link_to "X", song, method: :delete, confirm: '¿Borrar canción?', class: "erase" %>
     <% else %>
@@ -8,17 +8,25 @@
 
     <%= link_to_if song.youtube.present?, song.title, song.youtube, class: "title", target: '_blank' do %>
       <%= song.title %>
-
     <% end %>
+    
+
   </h4>
 
-  <div class="participants span4">
+
+  <div class="participants ">
     <% Play::Instruments.each do |i| %>
       <% if song.players?(i) %>
         <span class="label label-success"><a href="javascript:void(0);" data-toggle="tooltip" data-original-title="<%= song.players(i).map(&:name).to_sentence %>"><%= i %></a></span>
       <% else %>
         <span class="label"><%= i %></span>
       <% end %>
+    <% end %>
+  </div>
+
+  <div class="song_comment_link ">
+    <% if user_signed_in? %>
+      <%= link_to_function "Komentar (#{ song.comment_threads.count })", "$('##{ dom_id song }_comments').toggle(); return false;" %>
     <% end %>
   </div>
 
@@ -29,4 +37,45 @@
       <%= link_to "Me apunkto!", new_user_session_path, class: "btn" %>
     <% end %>
   </div>
+
+  <% if user_signed_in? %>
+    <div class="clear"></div>
+
+    <div id="<%= dom_id song %>_comments" class="comments" style="display: none;">
+      <%= link_to "Nuevo komentario", "#new-song-#{ song.id }-comment-modal", "data-toggle" => 'modal' %>
+  
+      <% song.comment_threads.each do |comment| %>
+        <div class="comment">
+          <div class="author"><%= link_to comment.user.name, '#'  %></div>
+          <div class="body">
+            <div class="body_wrapper">
+              <%= format_body(comment.body) %>
+            </div>
+
+    <!--        <%= link_to "Responder komentario", "#new-song-#{ song.id }-comment-modal", "data-toggle" => 'modal', :onclick => "$('#comment_parent_id').attr('value', #{ comment.id });"  %>-->
+          </div>
+          <div class="clear"></div>
+        </div>
+      <% end %>
+
+      <div id="new-song-<%= song.id %>-comment-modal" class="modal hide fade">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3>Añadir comentario</h3>
+        </div>
+        <%= form_for Comment.new do |f| %>
+          <%= f.hidden_field :commentable_id, :value => song.id %>
+          <%= f.hidden_field :parent_id, :value => nil %>
+          <div class="modal-body">
+            <%= f.label :body, "Komentario" %>
+            <%= f.text_area :body, :class => "song_comment" %>
+        </div>
+          <div class="modal-footer">
+            <%= f.submit 'Añadir Komentario' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <div class="clear"></div>
 </li>

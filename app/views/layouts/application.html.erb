@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dr.Tapi Party!</title>
+  <title>Champi Party!</title>
   <%= favicon_link_tag "icons/favicon.ico" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div id="champi_background">
+      <%= image_tag "background_body.jpg" %>
+    </div>
   <div class="container">
 
 	    <%= flashy %>
@@ -16,7 +19,8 @@
 
   </div>
   <footer>
-  	<span>>>>></span> 14 Junio 2013 - SALA STARVING - 22:00 // <span>¿dónde?</span> Fermín Caballero, 69 <span>¿transporte?</span> <span class="light">metro:</span> Peñagrande-Herrera Oria <span class="light">bus:</span> 67-133-127
+  	<span>>>>></span> 19 Octubre 2013 - NO SE EL SITIO, NO ME LO DICEN, NI LA HORA. 
+    <% if current_user %><%= link_to "Salir", destroy_user_session_path(), :method => :delete %><% end %>
   </footer>
 </body>
 </html>

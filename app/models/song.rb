@@ -5,6 +5,8 @@ class Song < ActiveRecord::Base
 
   belongs_to :user
   has_many :plays, dependent: :destroy
+  
+  acts_as_commentable
 
   def players?(instrument)
     players(instrument).any?

@@ -1,13 +1,7 @@
 html
-  background-color: #000
+
 body
   color: #FDFFF2
-  background: -moz-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#170041), color-stop(100%,rgba(0,0,0,0)))
-  background: -webkit-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
-  background: -o-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
-  background: -ms-linear-gradient(-45deg,  #170041 0%, rgba(100, 0, 0, 0) 100%)
-  background: linear-gradient(135deg, #170041 0%, rgba(100, 0, 0, 0) 100%)
   min-height: 771px
 h2
   color: #FDFFF2
@@ -81,6 +75,57 @@ form#new_user
     margin-left: -4px
 
 
+#champi_background
+  width: 100%
+  height: 100%
+  position: fixed
+  text-align: left
+  background: black url('/assets/background_body_decoration.png') repeat-x left bottom
+  z-index: -1
+  img 
+    height: 100%
+
+#champi_animation
+  height: 100px
+  padding-top: 30px
+  overflow: show
+  text-align: center
+  span
+    font-family: "desyrel"
+    font-size: 4em
+    font-weight: bolder
+
+  img
+    margin: 0px 20px
+
+
+textarea.song_comment
+  width: 350px
+  height: 120px
+
+div.comment 
+  margin-left: 150px
+  margin-bottom: 20px
+  div.author
+    float: left
+    padding-top: 5px
+    margin-right: 10px
+    width: 100px
+    text-align: right
+  
+  div.body
+    padding-left: 20px
+    background: transparent url('/assets/background_comments.png') no-repeat 0px 5px
+    float: left
+    div.body_wrapper
+      width: 400px
+      color: black
+      padding: 8px
+      background-color: white
+  
+div.clear
+  clear: both
+
 header
   h1
     font-family: "BlackCasper"
@@ -89,7 +134,13 @@ header
     line-height: 199px
     text-shadow: 16px 40px 14px #000
 
+.song_comment_link
+  width: 120px
+  float: left
+
 .participants
+  float: left
+  width: 400px
   .label-success
     a
       color: $white
@@ -125,7 +176,6 @@ header
   ul
     margin-left: 0px
   li
-    height: 28px
     border-bottom: 1px solid #06290A
     list-style: none
     color: #fff
